@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+/* styling for the whole document */
+body {
+  background-color: hsl(0, 0%, 15%); /* changing the background color */
+  font-family: source code pro, sans-serif, "Times New Roman", Times, serif; /*importing google font, also using sans serif and times new roman as a backup :)*/
+  font-size: 14px; /* Setting base font size for document */
+  line-height: 2; /*setting base line height of document */
+  margin: 1rem;
+  padding: 2rem;
+  border: 0.01rem solid hsl(0, 0%, 80%);
+  color: hsl(
+    0,
+    0%,
+    80%
+  ); /* setting font color (based off background HSL color */
+}
+
+/* styling my links */
+a {
+  text-decoration: none; /* removing underline from links */
+  color: hsl(
+    26,
+    63%,
+    52%
+  ); /*adding orage color to links trying to simulate VS Code color theme */
+  font-size: 1rem; /*making font size smaller */
+}
+
+/* styling header p text */
+header p {
+  color: hsl(26, 63%, 52%); /* changing the color of "email" to match links */
+}
+
+/* styling for main h1 element  */
+h1 {
+  text-align: center; /* aligning my H1 to center */
+  font-size: 2rem; /* h1 will have the largest font size */
+  text-shadow: 1px 1px 10px rgb(119, 119, 119);
+}
+
+/* Styling for sub-heading */
+h2 {
+  text-align: left; /* aligning my h2 elements to the left */
+  color: rgba(128, 189, 255, 0.804); /* giving h2 a blue color to match theme */
+  font-size: 1.6rem; /* making font a bit smaller for sub heading */
+}
+
+/* stying for sub-sub heading  */
+h3 {
+  color: rgba(
+    232,
+    198,
+    29,
+    0.756
+  ); /* changing color to dark yellow to stick with the vs code color theme */
+  font-size: 1rem; /* making sub-sub heading smaller */
+}
+
+/* stying for dropdown list (software skills)  */
+summary {
+  color: rgba(255, 167, 255, 0.706);
+}
+
+/* styling for profile pic*/
+header img {
+  border: 0.25rem solid black; /* making a black border around profile pic*/
+  border-radius: 50%; /* making border round*/
+  align-self: flex-start;
+  width: 20%;
+  height: 20%; /*making the pic more round, was oblong previously*/
+}
+
+form input,
+form textarea,
+form select {
+  padding: 1rem 3rem;
+  color: rgba(246, 246, 246, 0.766); /* form font color to match others */
+  border: 2px solid rgba(128, 189, 255, 0.804); /* adding blue border to form*/
+  background-color: rgba(35, 35, 35, 0.768);
+}
+
+form button {
+  padding: 0.5rem 1rem;
+  color: rgba(246, 246, 246, 0.766);
+  border: 2px solid rgba(128, 189, 255, 0.804); /* adding blue border to form button*/
+  background-color: black;
+  transition: color, 1s; /* setting 2s for the button transition to green on hover*/
+}
+
+/*removing form outline*/
+form input,
+form textarea {
+  outline: none;
+  
+}
+
+/*centering textarea of form*/
+form textarea {
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#email-phone {
+  text-align: right; /* aligning email/phone/address to left of page*/
+}
+
+/*placing my listed elements in a grid to align side by side **important** this took forever to figure out */
+.list {
+  border: 1px solid rgba(232, 198, 29, 0.231);
+
+  float: left;
+  width: 50%;
+  min-height: 20rem;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  align-items: center; /*making the form a column in the center of page*/
+  flex-direction: column;
+}
+
+label {
+  width: 200px;
+  display: inline-block; /* making the form line up properly */
+  padding: 10px;
+}
+
+#reason {
+  width: 239px;
+  display: inline-block; /* manually making the reson dropdown align*/
+}
+
+
+/* making my form button turn green on hover */
+form button:hover {
+  background-color: rgb(60, 114, 60);
+}
+
+/* making my links turn green on hover*/
+a:hover {
+  color: rgb(60, 114, 60);
+  transition: color, 1s;
+}
+
+@media (max-width: 1000px) {
+  .list {
+    border: 1px solid rgba(232, 198, 29, 0.231);
+
+    width: 100%; /* making the grid one column for mobile */
+    min-height: 20rem;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1000px) {
+  #email-phone {
+    text-align: center; /*making email/phone/address centered for mobile*/
+  }
+}
+
+/* centering my profile pic for mobile*/
+@media (max-width: 1000px) {
+  header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+}
+
+@media (max-width: 1000px) {
+  h1,
+  h2,
+  h3 {
+    text-align: center; /* centering my headings for mobile*/
+  }
+}
+
+@media (max-width: 1000px) {
+  label {
+    width: 100px;
+    display: inline-block; /* making the form line up properly for mobile*/
+    padding: 10px;
+  }
+}
+
+/*aligning collapsible software skill list to center for mobile*/
+@media (max-width: 1000px) {
+  details {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1000px) {
+  .list, h3 {
+    font-size: 1.2rem;
+    
+  }
+}
